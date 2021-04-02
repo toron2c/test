@@ -1,30 +1,11 @@
 'use strict';
-//Задание 2
-const post = {
-    author: "John", //вывести этот текст
-    postId: 23,
-    comments: [
-        {
-            userId: 10,
-            userName: "Alex",
-            text: "lorem ipsum",
-            rating: {
-                likes: 10,
-                dislikes: 2 //вывести это число
-            }
-        },
-        {
-            userId: 5, //вывести это число
-            userName: "Jane",
-            text: "lorem ipsum 2", //вывести этот текст
-            rating: {
-                likes: 3,
-                dislikes: 1
-            }
-        },
-    ]
-};
-console.log(post.author);
-console.log(post.comments[0].rating.dislikes);
-console.log(post.comments[1].userId);
-console.log(post.comments[1].text);
+//Конструктор Product в стиле ES6
+class Product {
+    constructor(name, price) {
+        this.name = name;
+        this.price = price;
+    }
+    make25PercentDiscount() {
+        this.price = this.price * 0.75;
+    }
+}

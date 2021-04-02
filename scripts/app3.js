@@ -1,20 +1,19 @@
 'use strict';
-// Задание №3
-const products = [
-    {
-        id: 3,
-        price: 200,
-    },
-    {
-        id: 4,
-        price: 900,
-    },
-    {
-        id: 1,
-        price: 1000,
-    },
-];
-products.forEach(product => {
-    product.price = product.price * 0.85;
-})
-
+//Конструктор Post в стиле ES5
+function Post(author, text, date) {
+    this.author = author;
+    this.text = text;
+    this.date = date;
+}
+Post.prototype.edit = function (text) {
+    this.text = text;
+};
+function AttachedPost(author, text, date) {
+    Post.call(this, author, text, date);
+    this.highlighted = false;
+}
+AttachedPost.prototype = Object.create(Post.prototype);
+AttachedPost.prototype.constructor = AttachedPost;
+AttachedPost.prototype.makeTextHighlighted = function () {
+    this.highlighted = true;
+};
