@@ -1,0 +1,75 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+.main {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: auto min-content 1fr auto;
+  grid-template-columns: 200px 1fr;
+  grid-template-areas:
+    "header header"
+    "side1 content"
+    "side2 content"
+    "footer footer";
+}
+.header {
+  grid-area: header;
+  background-color: #ccc;
+}
+.content {
+  grid-area: content;
+  background-color: yellow;
+  resize: vertical;
+  overflow: auto;
+  height: max-content;
+}
+img {
+  position: float;
+  float: left;
+  padding: 10px;
+}
+.side-1 {
+  grid-area: side1;
+  background-color: red;
+  padding: 10px;
+  resize: vertical;
+  overflow: auto;
+  height: max-content;
+}
+
+.side-2 {
+  grid-area: side2;
+  background-color: green;
+  padding: 10px;
+  resize: vertical;
+  overflow: auto;
+  height: max-content;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: #ccc;
+}
+
+@media (max-width: 900px) {
+  .main {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto min-content auto 1fr auto;
+    grid-template-areas:
+      "header"
+      "side1"
+      "content"
+      "side2"
+      "footer";
+  }
+  .content {
+    grid-area: content;
+  }
+
+  .footer {
+    grid-area: footer;
+  }
+}
