@@ -34,7 +34,6 @@ img {
 .side-1 {
   grid-area: side1;
   background-color: red;
-  padding: 10px;
   resize: vertical;
   overflow: auto;
   height: max-content;
@@ -43,7 +42,6 @@ img {
 .side-2 {
   grid-area: side2;
   background-color: green;
-  padding: 10px;
   resize: vertical;
   overflow: auto;
   height: max-content;
