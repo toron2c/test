@@ -8,6 +8,10 @@
   </head>
   <body>
     <form class="form">
+      <div class="showModalIcon">
+        <div class="showModal__line1"></div>
+        <div class="showModal__line2"></div>
+      </div>
       <h2 class="form__title">Транспортные средства и водители</h2>
       <div class="form__field">
         <label class="form__label" for="gosnumber"
@@ -51,7 +55,7 @@
           type="date"
           name="date"
           class="form__input"
-          title="Введите дату в формате ГГГГ-ММ-ДД"
+          title="Введите ориентировочную дату"
           required
         />
       </div>
@@ -61,8 +65,8 @@
           ><span class="form__title form__title--small">ФИО</span></label
         >
         <input
-          name="driver-name"
-          id="driver-name"
+          name="namedriver"
+          id="namedriver"
           type="text"
           class="form__input"
           placeholder="Укажите ФИО водителя"
@@ -86,8 +90,10 @@
             placeholder="Серия"
             required
           />
+
           <input
             id="passportNumber"
+            name="passportNumber"
             number="passportNumber"
             type="text"
             aria-label="Номер паспорта"
@@ -117,6 +123,7 @@
             >Когда выдан</span
           ></label
         >
+        <span class="custom-placeholder--date-passport">Когда выдан</span>
         <input
           id="passportDate"
           name="passportDate"
@@ -129,10 +136,23 @@
         />
       </div>
       <div class="form__buttons">
-        <button class="form__button" type="submit">Отправить</button>
-        <button class="form__button form__button--white">Отменить</button>
+        <button id="submit" class="form__button" type="submit">
+          Отправить
+        </button>
+        <button id="clear" class="form__button form__button--white">
+          Отменить
+        </button>
       </div>
     </form>
+    <dialog id="clearData">
+      <form class="form-modal" action="dialog">
+        <p class="form-modal__text">Очистить данные формы?</p>
+        <button id="clearModal" class="form__button">Да</button>
+        <button id="cancel" class="form__button form__button--white">
+          Нет
+        </button>
+      </form>
+    </dialog>
     <script src="./index.js"></script>
   </body>
 </html>
