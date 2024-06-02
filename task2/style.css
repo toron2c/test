@@ -1,0 +1,104 @@
+body {
+  font-size: 62.5%;
+  background-color: #ccc;
+  font-family: Arial, Helvetica, sans-serif;
+}
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+.form {
+  background-color: #fff;
+  width: 20rem;
+  margin: 5% auto;
+  border: 1px solid black;
+  padding: 2rem 1.5rem;
+}
+.form__group-input {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 0.5rem;
+}
+
+.form__field {
+  width: 100%;
+  margin: 0 0 0.8rem;
+  position: relative;
+}
+.form__input {
+  width: 100%;
+  padding: 0.5rem 0 0.5rem 0.5rem;
+  font-size: 0.6rem;
+  border: 1px solid black;
+}
+
+.custom-placeholder {
+  position: absolute;
+  color: #888484;
+  top: 30px;
+  left: 12px;
+}
+
+.form__title {
+  font-weight: bold;
+  font-size: 0.9rem;
+  margin: 0.8rem 0;
+  text-align: center;
+}
+
+.form__title--middle {
+  font-size: 0.7rem;
+  text-align: left;
+  margin: 1rem 0;
+}
+
+.form__title--small {
+  font-size: 0.6rem;
+  text-align: left;
+  display: block;
+  margin: 0 0 0.5rem;
+}
+.form__buttons {
+  margin: 1.5rem 0 0;
+}
+
+.form__button {
+  background-color: #000;
+  color: #fff;
+  padding: 0.8rem 1.6rem;
+  border-radius: 7px;
+  cursor: pointer;
+  font-size: 0.7rem;
+  margin-right: 0.4rem;
+}
+
+.form__button--white {
+  background-color: #fff;
+  border: 1px solid black;
+  color: #000;
+}
+
+/* form .form__field:nth-of-type(3) {
+  position: relative;
+}
+.form .form__field:nth-of-type(3)::after {
+  position: absolute;
+  content: "";
+  width: 0.7rem;
+  height: 0.7rem;
+  right: 16px;
+  top: 32px;
+  background-image: url("calendar-svgrepo-com.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  pointer-events: none;
+} */
+input[type="date"]:required:invalid::-webkit-datetime-edit {
+  color: transparent;
+}
+input[type="date"]:focus::-webkit-datetime-edit {
+  color: black !important;
+}

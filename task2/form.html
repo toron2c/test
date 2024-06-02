@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Транспортные средства и водители</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <form class="form">
+      <h2 class="form__title">Транспортные средства и водители</h2>
+      <div class="form__field">
+        <label class="form__label" for="gosnumber"
+          ><span class="form__title form__title--small">Гос-номер</span></label
+        >
+        <input
+          class="form__input"
+          type="text"
+          id="gosnumber"
+          name="gosnumber"
+          placeholder="Укажите го-номер"
+          title="Введите номер в формате А123АА77"
+          required
+        />
+      </div>
+      <div class="form__field">
+        <label class="form__label" for="auto"
+          ><span class="form__title form__title--small"
+            >Транспортное средство</span
+          ></label
+        >
+        <input
+          type="text"
+          id="auto"
+          name="auto"
+          title="Введите транспортное средство"
+          placeholder="Транспортное средство"
+          class="form__input"
+          required
+        />
+      </div>
+      <div class="form__field">
+        <label class="form__label" for="date"
+          ><span class="form__title form__title--small"
+            >Ориентировочная дата прибытия к покупателю</span
+          ></label
+        >
+        <span class="custom-placeholder">Дата*</span>
+        <input
+          id="date"
+          type="date"
+          name="date"
+          class="form__input"
+          title="Введите дату в формате ГГГГ-ММ-ДД"
+          required
+        />
+      </div>
+      <h3 class="form__title form__title--middle">Данные о водителе</h3>
+      <div class="form__field">
+        <label class="form__label" for="driver-name"
+          ><span class="form__title form__title--small">ФИО</span></label
+        >
+        <input
+          name="driver-name"
+          id="driver-name"
+          type="text"
+          class="form__input"
+          placeholder="Укажите ФИО водителя"
+          title="Иванов Иван Иванович"
+          required
+        />
+      </div>
+      <div class="form__field">
+        <label for="passportSeria" class="form__label">
+          <span class="form__title form__title--small"
+            >Паспортные данные</span
+          ></label
+        >
+        <div class="form__group-input">
+          <input
+            id="passportSeria"
+            name="passportSeria"
+            type="text"
+            aria-label="Серия паспорта"
+            class="form__input"
+            placeholder="Серия"
+            required
+          />
+          <input
+            id="passportNumber"
+            number="passportNumber"
+            type="text"
+            aria-label="Номер паспорта"
+            class="form__input"
+            placeholder="Номер"
+            required
+          />
+        </div>
+      </div>
+      <div class="form__field">
+        <label class="form__label" for="passportData"
+          ><span class="form__title form__title--small">Кем выдан</span></label
+        >
+        <input
+          id="passportData"
+          name="passportData"
+          placeholder="Кем выдан"
+          type="text"
+          title="Кем выдан паспорт"
+          class="form__input"
+          required
+        />
+      </div>
+      <div class="form__field">
+        <label class="form__label" for="passportDate"
+          ><span class="form__title form__title--small"
+            >Когда выдан</span
+          ></label
+        >
+        <input
+          id="passportDate"
+          name="passportDate"
+          placeholder="Когда выдан"
+          type="date"
+          title="Например 01/02/2024"
+          class="form__input"
+          required
+          min="1900-01-01"
+        />
+      </div>
+      <div class="form__buttons">
+        <button class="form__button" type="submit">Отправить</button>
+        <button class="form__button form__button--white">Отменить</button>
+      </div>
+    </form>
+    <script src="./index.js"></script>
+  </body>
+</html>
